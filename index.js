@@ -20,40 +20,15 @@ Array.from(btns).forEach((button) => {
             string = string.slice(0, string.length - 1)
             display.innerHTML = string
         } else {
-            if (string[string.length - 1] == "-" && e.target.innerHTML == "-") {
+            if ((string[string.length - 1] == "-" ||string[string.length - 1] == "+" || string[string.length - 1] == "*" || string[string.length - 1] == "." || string[string.length - 1] == "/") && (e.target.innerHTML == "-" || e.target.innerHTML == "+" || e.target.innerHTML == "*" || e.target.innerHTML == "." || e.target.innerHTML == "/")) {
                 return
             }
-            if (string[string.length - 1] == "+" && e.target.innerHTML == "+") {
-                return
-            }
-            if (string[string.length - 1] == "*" && e.target.innerHTML == "*") {
-                return
-            }
-            if (string[string.length - 1] == "." && e.target.innerHTML == ".") {
-                return
-            }
-            if (string == "" && e.target.innerHTML == "/") {
-                string = "0" + e.target.innerHTML
+            if (string == "" && (e.target.innerHTML == "/" || e.target.innerHTML == "." || e.target.innerHTML == "*")) {
                 display.innerHTML = string
                 return
             }
-            if (string == "" && e.target.innerHTML == ".") {
-                string = "0" + e.target.innerHTML
-                display.innerHTML = string
-                return
-            }
-            if (string == "" && e.target.innerHTML == "*") {
-                string = "0" + e.target.innerHTML
-                display.innerHTML = string
-                return
-            }
-            if (string[string.length - 1] == "/" && e.target.innerHTML == "/") {
-                return
-            }
-
             string = string + e.target.innerHTML
             display.innerHTML = string
-
 
         }
     })
