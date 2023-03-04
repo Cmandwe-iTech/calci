@@ -18,8 +18,7 @@ Array.from(btns).forEach((button) => {
       if(string.toString().includes(".")){
         toggle = false
         console.log("hiii");
-      }else{
-        
+      }else{    
         toggle = true;
       }
     } else if (e.target.innerHTML == "Back") {
