@@ -19,6 +19,7 @@ Array.from(btns).forEach((button) => {
         toggle = false
         console.log("hiii");
       }else{
+        
         toggle = true;
       }
     } else if (e.target.innerHTML == "Back") {
